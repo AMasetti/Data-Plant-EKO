@@ -1,0 +1,9 @@
+.vscode
+eko_plant/secrets.h
+*.db
+*.conf
+*.log
+
+!mqtt/mosquitto-conf/.gitkeep
+!mqtt/mosquitto-data/.gitkeep
+!mqtt/mosquitto-logs/.gitkeep

@@ -1,0 +1,18 @@
+version: '2.1'
+
+# Service Port List
+# 1883 mosquitto
+# 8883 mqtt
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    hostname: mqtt
+    ports:
+      - 1883:1883
+      - 8883:8883
+    volumes:
+      - ./mqtt/mosquitto-data:/mosquitto/data
+      - ./mqtt/mosquitto-logs:/mosquitto/log
+      - ./mqtt/mosquitto-conf:/mosquitto/config
+    restart: unless-stopped
